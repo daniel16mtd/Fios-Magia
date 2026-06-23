@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="pt-BR">
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+    
+  </svg>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fios e Magia — Crochê artesanal de verão</title>
+  <link rel="icon" type="image/png" href="midia/WhatsApp Image 2026-05-29 at 10.16.58.jpeg">
+  <meta name="description"
+    content="Peças únicas em crochê: vestidos, biquínis, tapetes, bolsas e mais. Feito à mão por Fios e Magia." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Playfair+Display:ital,wght@0,600;1,600&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #fff7ee;
+      --fg: #3a1a10;
+      --muted: #7a4a3a;
+      --card: #ffffff;
+      --border: #f3d8c4;
+      --primary: #ef5a2a;
+      --primary-2: #f7913a;
+      --accent: #ff7a45;
+      --soft: linear-gradient(180deg, #fff1e0, #ffd9b8);
+      --warm: linear-gradient(135deg, #ff4d4d, #ff9a3c);
+      --shadow: 0 8px 30px -12px rgba(180, 60, 20, .25);
+      --shadow-lg: 0 14px 50px -15px rgba(180, 60, 20, .45);
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0
+    }
+
+    body {
+      font-family: "Poppins", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.55;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Playfair Display", serif;
+      margin: 0
+    }
+
+    a {
+      color: inherit
+    }
+
+    img {
+      display: block;
+      max-width: 100%
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: var(--warm);
+      color: #fff;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: .18;
+      background-image:
+        radial-gradient(circle at 20% 30%, #fff 1px, transparent 1.5px),
+        radial-gradient(circle at 70% 60%, #fff 1px, transparent 1.5px);
+      background-size: 60px 60px, 90px 90px;
+    }
+
+    .hero-inner {
+      position: relative;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 64px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+      text-align: center;
+    }
+
+    .logo {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: var(--shadow-lg);
+      border: 4px solid rgba(255, 255, 255, .5);
+    }
+
+    .brand {
+      font-family: "Dancing Script", cursive;
+      font-size: 32px;
+      opacity: .95;
+    }
+
+    .hero h1 {
+      font-size: 44px;
+      line-height: 1.1;
+      margin-top: 8px;
+      font-weight: 600;
+    }
+
+    .hero p.lead {
+      font-size: 18px;
+      opacity: .95;
+      max-width: 520px;
+      margin: 12px auto 0
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #fff;
+      color: var(--primary);
+      padding: 14px 24px;
+      border-radius: 999px;
+      font-weight: 500;
+      text-decoration: none;
+      box-shadow: var(--shadow);
+      transition: transform .2s ease;
+      margin-top: 24px;
+    }
+
+    .btn:hover {
+      transform: scale(1.05)
+    }
+
+    .btn.ghost {
+      background: rgba(255, 255, 255, .15);
+      color: #fff;
+      backdrop-filter: blur(4px)
+    }
+
+    @media (min-width:768px) {
+      .hero-inner {
+        flex-direction: row;
+        text-align: left;
+        padding: 96px 32px;
+        gap: 56px
+      }
+
+      .logo {
+        width: 260px;
+        height: 260px
+      }
+
+      .hero h1 {
+        font-size: 60px
+      }
+    }
+
+    /* Section */
+    section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 72px 24px
+    }
+
+    .section-head {
+      text-align: center;
+      margin-bottom: 48px
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .eyebrow::before,
+    .eyebrow::after {
+      content: "✦"
+    }
+
+    .section-head h2 {
+      font-size: 40px;
+      margin: 12px 0 8px;
+      color: var(--fg)
+    }
+
+    .section-head p {
+      color: var(--muted);
+      max-width: 520px;
+      margin: 0 auto
+    }
+
+    /* Grid */
+    .grid {
+      display: grid;
+      gap: 24px;
+      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+      transition: transform .25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px)
+    }
+
+    .thumb {
+      aspect-ratio: 4/3;
+      border-radius: 10px;
+      background: var(--soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 72px;
+      margin-bottom: 18px;
+    }
+
+    .cat {
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .card h3 {
+      font-size: 20px;
+      margin: 4px 0 0;
+      color: var(--fg)
+    }
+
+    .row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-top: 16px;
+    }
+
+    .price {
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--primary)
+    }
+
+    .pill {
+      background: #ffe5d1;
+      color: #a83a14;
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background .2s;
+    }
+
+    .pill:hover {
+      background: var(--accent);
+      color: #fff
+    }
+
+    /* Maps */
+    .contact {
+      background: #fff3e6
+    }
+
+    .map-wrap {
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+
+    .map-wrap iframe {
+      display: block;
+      width: 100%;
+      height: 380px;
+      border: 0
+    }
+
+
+    section img {
+      width: 100%;
+
+      border-radius: 10%;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--warm);
+      color: #fff;
+      text-align: center;
+      padding: 48px 24px;
+    }
+
+    footer .brand {
+      font-size: 34px
+    }
+
+    footer p {
+      margin: 6px 0;
+      opacity: .95
+    }
+
+    footer a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #fff;
+      margin-top: 10px
+    }
+
+    div#hero-inner a{
+      width: 40%;
+    }
+
+    #toma{
+      width: 3%;
+      position: relative;
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <img class="logo" src="midia/WhatsApp Image 2026-06-05 at 20.25.31.jpeg" alt="Logo Fios e Magia" />
+      <div>
+        <div class="brand">Fios e Magia</div>
+        <h1>Coleção de Verão<br />em Crochê</h1>
+        <p class="lead">Peças artesanais únicas, feitas com fios selecionados e muito carinho.</p>
+        <a class="btn" href="https://instagram.com/fios.e.magias" target="_blank" rel="noopener">
+          <!--<img src="midia/instagram (1).png" id="toma">--> @fios.e.magias</a>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="section-head">
+      <div class="eyebrow">Catálogo</div>
+      <h2>Nossas peças</h2>
+      <p>Cada item é tecido à mão. Encomendas e cores personalizadas pelo Instagram.</p>
+    </div>
+
+    <div class="grid">
+      <!-- Moda -->
+      <article class="card">
+        <div class="thumb">
+          <img src="midia/mulher two.jfif" alt="">
+        </div>
+        <div class="cat">Moda</div>
+        <h3>Vestido com detalhes</h3>
+        <div class="row">
+          <span class="price">R$ 80</span>
+          <a class="pill" href="https://instagram.com/fios.e.magias" target="_blank" rel="noopener">Encomendar</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb"><img src="midia/mulher glogle.jfif" alt=""></div>
+        <div class="cat">Moda</div>
+        <h3>Vestido simples</h3>
+        <div class="row"><span class="price">R$ 55</span><a class="pill" href="https://instagram.com/fios.e.magias"
+            target="_blank" rel="noopener">Encomendar</a></div>
+      </article>
+      <article class="card">
+        <div class="thumb"><img src="midia/biquine.jpeg" alt=""></div>
+        <div class="cat">Moda</div>
+        <h3>Biquíni</h3>
+        <div class="row"><span class="price">R$ 25</span><a class="pill" href="https://instagram.com/fios.e.magias"
+            target="_blank" rel="noopener">Encomendar</a></div>
+      </article>
+      <article class="card">
+        <div class="thumb"><img src="midia/tapete.jpeg" alt=""></div>
+        <div class="cat">Moda</div>
+        <h3>Blusa de frio simples</h3>
+        <div class="row"><span class="price">R$ 50</span><a class="pill" href="https://instagram.com/fios.e.magias"
+            target="_blank" rel="noopener">Encomendar</a></div>
+      </article>
+      <article class="card">
+        <div class="thumb"><img src="midia/bolça.jpeg" alt=""></div>
+        <div class="cat">Moda</div>
+        <h3>Bolsa de crochê</h3>
+        <div class="row"><span class="price">R$ 30</span><a class="pill" href="https://instagram.com/fios.e.magias"
+            target="_blank" rel="noopener">Encomendar</a></div>
+      </article>
+      <article class="card">
+        <div class="thumb"><img src="midia/bebe.jpeg" alt=""></div>
+        <div class="cat">Moda</div>
+        <h3>Roupa de bebê (por peça)</h3>
+        <div class="row"><span class="price">R$ 20</span><a class="pill" href="https://instagram.com/fios.e.magias"
+            target="_blank" rel="noopener">Encomendar</a></div>
+      </article>
+
+      <!-- Casa -->
+      <!---->
+      <article class="card">
+        <div class="thumb"><img src="midia/pano marrom.jpeg" alt=""></div>
+        <div class="cat">Casa</div>
+        <h3>Passadeira</h3>
+        <div class="row"><span class="price">R$ 200</span><a class="pill" href="https://instagram.com/fios.e.magias"
+            target="_blank" rel="noopener">Encomendar</a></div>
+      </article>
+      <article class="card">
+        <div class="thumb"><img src="midia/pano verde.jpeg" alt=""></div>
+        <div class="cat">Casa</div>
+        <h3>Tapete com detalhes</h3>
+        <div class="row"><span class="price">R$ 80</span><a class="pill" href="https://instagram.com/fios.e.magias"
+            target="_blank" rel="noopener">Encomendar</a></div>
+      </article>
+      <article class="card">
+        <div class="thumb"><img src="midia/pano roxo.jpeg" alt=""></div>
+        <div class="cat">Casa</div>
+        <h3>Tapete sem detalhes</h3>
+        <div class="row"><span class="price">R$ 60</span><a class="pill" href="https://instagram.com/fios.e.magias"
+            target="_blank" rel="noopener">Encomendar</a></div>
+      </article>
+      <article class="card">
+        <div class="thumb"><img src="midia/jogoAmericano.jpeg" alt=""></div>
+        <div class="cat">Mesa</div>
+        <h3>Jogo americano de jantar</h3>
+        <div class="row"><span class="price">R$ 45</span><a class="pill" href="https://instagram.com/fios.e.magias"
+            target="_blank" rel="noopener">Encomendar</a></div>
+      </article>
+      <article class="card">
+        <div class="thumb"><img src="midia/porta pano.jpeg" alt=""></div>
+        <div class="cat">Cozinha</div>
+        <h3>Porta pano de prato</h3>
+        <div class="row"><span class="price">R$ 35</span><a class="pill" href="https://instagram.com/fios.e.magias"
+            target="_blank" rel="noopener">Encomendar</a></div>
+      </article>
+      <article class="card">
+        <div class="thumb"><img src="midia/portaSabonete.jpeg" alt=""></div>
+        <div class="cat">Banho</div>
+        <h3>Porta sabonete</h3>
+        <div class="row"><span class="price">R$ 20</span><a class="pill" href="https://instagram.com/fios.e.magias"
+            target="_blank" rel="noopener">Encomendar</a></div>
+      </article>
+    </div>
+
+  </section>
+
+  <section class="contact">
+    <div class="section-head">
+      <div class="eyebrow">Onde nos achar</div>
+      <h2>Contato</h2>
+      <p>Atendemos por encomenda em todo o Brasil via Instagram.</p>
+    </div>
+    <div class="map-wrap">
+      <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=Brasil&output=embed" title="Mapa - Brasil"></iframe>
+    </div>
+  </section>
+
+  <footer>
+    <div class="brand">Fios e Magia</div>
+    <p>Empresa especializada em Crochê</p>
+    <a href="https://instagram.com/fios.e.magias" target="_blank" rel="noopener"> @fios.e.magias</a>
+  </footer>
+
+</body>
+
+</html>
